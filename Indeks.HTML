@@ -1,0 +1,376 @@
+```html
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | M. Raka Muazham</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        dark: '#0a0a0a',
+                        light: '#fcfcfc',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0a0a0a;
+            color: #fcfcfc;
+        }
+    </style>
+</head>
+<body class="bg-dark text-light antialiased selection:bg-white selection:text-black">
+
+    <!-- Header & Navigation -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-dark/80 backdrop-blur-md border-b border-zinc-800">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#hero" class="text-xl font-bold tracking-tight">M. Raka Muazham</a>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-zinc-400">
+                <a href="#about" class="hover:text-white transition-colors">Tentang</a>
+                <a href="#skills" class="hover:text-white transition-colors">Keahlian</a>
+                <a href="#projects" class="hover:text-white transition-colors">Proyek</a>
+                <a href="#contact" class="hover:text-white transition-colors">Kontak</a>
+            </nav>
+            <a href="https://instagram.com/zam1.1.1.1" target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex items-center gap-2 bg-white text-black px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-zinc-200 transition-all">
+                <i class="fa-brands fa-instagram"></i> Ikuti Saya
+            </a>
+            <!-- Mobile Menu Toggle Button -->
+            <button id="menu-btn" class="md:hidden text-2xl text-zinc-300 focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-zinc-900 border-b border-zinc-800 px-6 py-4 space-y-3">
+            <a href="#about" class="block text-zinc-300 hover:text-white py-1">Tentang</a>
+            <a href="#skills" class="block text-zinc-300 hover:text-white py-1">Keahlian</a>
+            <a href="#projects" class="block text-zinc-300 hover:text-white py-1">Proyek</a>
+            <a href="#contact" class="block text-zinc-300 hover:text-white py-1">Kontak</a>
+            <a href="https://instagram.com/zam1.1.1.1" target="_blank" class="inline-flex items-center gap-2 bg-white text-black px-4 py-2 rounded-full text-sm font-semibold w-full justify-center mt-2">
+                <i class="fa-brands fa-instagram"></i> Ikuti Saya
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. HERO SECTION -->
+        <section id="hero" class="min-h-screen pt-28 pb-16 flex items-center border-b border-zinc-900">
+            <div class="max-w-6xl mx-auto px-6 w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <!-- Kolom Kiri -->
+                <div class="space-y-6 text-center md:text-left">
+                    <span class="inline-block py-1 px-3 rounded-full bg-zinc-900 border border-zinc-800 text-xs text-zinc-400 tracking-wider uppercase">
+                        Portofolio Digital
+                    </span>
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight">
+                        M. Raka Muazham
+                    </h1>
+                    <p class="text-zinc-400 text-base sm:text-lg max-w-lg mx-auto md:mx-0 leading-relaxed">
+                        Siswa SMK Cyber Media jurusan Manajemen Perkantoran dan Layanan Bisnis yang berdedikasi tinggi, terampil dalam administrasi perkantoran serta pengembangan web dasar.
+                    </p>
+                    <div class="pt-2 flex flex-wrap justify-center md:justify-start gap-4">
+                        <a href="https://instagram.com/zam1.1.1.1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-zinc-200 transition-all shadow-lg shadow-white/5">
+                            <i class="fa-brands fa-instagram"></i> Ikuti Saya
+                        </a>
+                        <a href="#projects" class="inline-flex items-center gap-2 bg-zinc-900 text-white border border-zinc-800 px-6 py-3 rounded-full font-semibold hover:bg-zinc-800 transition-all">
+                            Lihat Proyek <i class="fa-solid fa-arrow-down text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Kolom Kanan (Foto Profil) -->
+                <div class="flex justify-center">
+                    <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-2xl group">
+                        <!-- Placeholder Foto Profil -->
+                        <img src="https://placehold.co/600x600/18181b/fcfcfc?text=M.+Raka+Muazham" alt="M. Raka Muazham" class="w-full h-full object-cover grayscale group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x600/18181b/fcfcfc?text=Raka+Muazham'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60"></div>
+                        <div class="absolute bottom-4 left-4 right-4 text-center">
+                            <span class="text-xs tracking-widest text-zinc-300 uppercase font-medium">Profesional Muda</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. ABOUT SECTION -->
+        <section id="about" class="py-24 border-b border-zinc-900 bg-black">
+            <div class="max-w-4xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold tracking-tight mb-3">Tentang Saya</h2>
+                    <p class="text-zinc-400 text-sm max-w-md mx-auto">Mengenal latar belakang dan fokus pengembangan diri saya.</p>
+                </div>
+                <div class="bg-zinc-900/50 border border-zinc-800/80 rounded-2xl p-8 sm:p-10 backdrop-blur-sm relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full blur-3xl pointer-events-none"></div>
+                    <div class="space-y-6 text-zinc-300 leading-relaxed text-base sm:text-lg">
+                        <p>
+                            Halo! Nama saya <strong class="text-white font-semibold">M. Raka Muazham</strong>. Saat ini saya sedang menempuh pendidikan di <strong class="text-white font-semibold">SMK Cyber Media</strong> dengan mengambil konsentrasi keahlian <strong class="text-white font-semibold">MPLB (Manajemen Perkantoran dan Layanan Bisnis)</strong>.
+                        </p>
+                        <p>
+                            Melalui latar belakang pendidikan perkantoran yang saya ampu, saya aktif mengasah kompetensi dalam pengelolaan administrasi, korespondensi, pelayanan bisnis, serta pemanfaatan aplikasi penunjang produktivitas. 
+                        </p>
+                        <p>
+                            Selain bidang administratif, saya memiliki ketertarikan mendalam pada bidang teknologi dan pengembangan web. Saat ini, saya secara konsisten mencari kesempatan serta pengalaman nyata untuk mengimplementasikan keahlian administrasi perkantoran saya secara profesional dalam dunia kerja yang dinamis.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. SKILL SECTION -->
+        <section id="skills" class="py-24 border-b border-zinc-900">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold tracking-tight mb-3">Keahlian</h2>
+                    <p class="text-zinc-400 text-sm max-w-md mx-auto">Kompetensi teknis dan penguasaan perangkat lunak yang saya miliki.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Advance Skills -->
+                    <div class="bg-zinc-900/40 border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-zinc-700 transition-colors">
+                        <div>
+                            <div class="flex items-center justify-between mb-6">
+                                <h3 class="font-semibold text-lg">Advance</h3>
+                                <span class="text-xs bg-white text-black px-2.5 py-1 rounded-full font-medium">Mahir</span>
+                            </div>
+                            <ul class="space-y-4">
+                                <li class="flex items-center gap-3 bg-zinc-900 p-3.5 rounded-xl border border-zinc-800">
+                                    <i class="fa-solid fa-file-word text-white text-lg w-6 text-center"></i>
+                                    <span class="font-medium text-sm">Microsoft Word</span>
+                                </li>
+                                <li class="flex items-center gap-3 bg-zinc-900 p-3.5 rounded-xl border border-zinc-800">
+                                    <i class="fa-solid fa-file-powerpoint text-white text-lg w-6 text-center"></i>
+                                    <span class="font-medium text-sm">Microsoft PowerPoint</span>
+                                </li>
+                                <li class="flex items-center gap-3 bg-zinc-900 p-3.5 rounded-xl border border-zinc-800">
+                                    <i class="fa-solid fa-file-excel text-white text-lg w-6 text-center"></i>
+                                    <span class="font-medium text-sm">Microsoft Excel</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="text-xs text-zinc-500 mt-6">Penguasaan mendalam untuk dokumen, presentasi, dan pengolahan data.</p>
+                    </div>
+
+                    <!-- Intermediate Skills -->
+                    <div class="bg-zinc-900/40 border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-zinc-700 transition-colors">
+                        <div>
+                            <div class="flex items-center justify-between mb-6">
+                                <h3 class="font-semibold text-lg">Intermediate</h3>
+                                <span class="text-xs bg-zinc-800 text-zinc-300 px-2.5 py-1 rounded-full font-medium">Menengah</span>
+                            </div>
+                            <ul class="space-y-4">
+                                <li class="flex items-center gap-3 bg-zinc-900 p-3.5 rounded-xl border border-zinc-800">
+                                    <i class="fa-solid fa-palette text-white text-lg w-6 text-center"></i>
+                                    <span class="font-medium text-sm">Canva</span>
+                                </li>
+                                <li class="flex items-center gap-3 bg-zinc-900 p-3.5 rounded-xl border border-zinc-800">
+                                    <i class="fa-solid fa-video text-white text-lg w-6 text-center"></i>
+                                    <span class="font-medium text-sm">CapCut</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="text-xs text-zinc-500 mt-6">Terampil dalam pembuatan desain grafis penunjang media sosial dan penyuntingan video.</p>
+                    </div>
+
+                    <!-- Basic Skills -->
+                    <div class="bg-zinc-900/40 border border-zinc-800 rounded-2xl p-6 sm:p-8 flex flex-col justify-between hover:border-zinc-700 transition-colors">
+                        <div>
+                            <div class="flex items-center justify-between mb-6">
+                                <h3 class="font-semibold text-lg">Basic</h3>
+                                <span class="text-xs bg-zinc-800 text-zinc-300 px-2.5 py-1 rounded-full font-medium">Dasar</span>
+                            </div>
+                            <ul class="space-y-4">
+                                <li class="flex items-center gap-3 bg-zinc-900 p-3.5 rounded-xl border border-zinc-800">
+                                    <i class="fa-brands fa-html5 text-white text-lg w-6 text-center"></i>
+                                    <span class="font-medium text-sm">HTML</span>
+                                </li>
+                                <li class="flex items-center gap-3 bg-zinc-900 p-3.5 rounded-xl border border-zinc-800">
+                                    <i class="fa-brands fa-css3-alt text-white text-lg w-6 text-center"></i>
+                                    <span class="font-medium text-sm">CSS</span>
+                                </li>
+                                <li class="flex items-center gap-3 bg-zinc-900 p-3.5 rounded-xl border border-zinc-800">
+                                    <i class="fa-brands fa-square-js text-white text-lg w-6 text-center"></i>
+                                    <span class="font-medium text-sm">JavaScript</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="text-xs text-zinc-500 mt-6">Pemahaman dasar struktur web interaktif dan penataannya.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. PROJECT SECTION -->
+        <section id="projects" class="py-24 border-b border-zinc-900 bg-black">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold tracking-tight mb-3">Proyek Pilihan</h2>
+                    <p class="text-zinc-400 text-sm max-w-md mx-auto">Beberapa aplikasi web yang pernah saya buat dan kembangkan.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Project 1: Aplikasi Restoran -->
+                    <div class="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-7 flex flex-col justify-between hover:border-zinc-700 transition-all group">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-xs uppercase tracking-wider text-zinc-400 bg-zinc-800 px-3 py-1 rounded-full">Web Aplikasi</span>
+                                <i class="fa-solid fa-utensils text-xl text-zinc-400 group-hover:text-white transition-colors"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Aplikasi Restoran</h3>
+                            <p class="text-zinc-400 text-sm mb-6 leading-relaxed">
+                                Sistem aplikasi web interaktif untuk pengelolaan menu makanan, pemesanan, dan transaksi kasir restoran secara efisien.
+                            </p>
+                        </div>
+                        <a href="https://share.gemini.google/4EYzLeeIl9Pu" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-white text-black font-semibold py-3 px-5 rounded-xl text-sm hover:bg-zinc-200 transition-all">
+                            <span>Buka Aplikasi</span> <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                        </a>
+                    </div>
+
+                    <!-- Project 2: Aplikasi Todo List -->
+                    <div class="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-7 flex flex-col justify-between hover:border-zinc-700 transition-all group">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-xs uppercase tracking-wider text-zinc-400 bg-zinc-800 px-3 py-1 rounded-full">Produktivitas</span>
+                                <i class="fa-solid fa-list-check text-xl text-zinc-400 group-hover:text-white transition-colors"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Aplikasi Todo List</h3>
+                            <p class="text-zinc-400 text-sm mb-6 leading-relaxed">
+                                Aplikasi manajemen tugas harian yang membantu menyusun jadwal kerja, prioritas tugas, dan pencatatan status penyelesaian.
+                            </p>
+                        </div>
+                        <a href="https://share.gemini.google/CleyVIgErzeq" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-white text-black font-semibold py-3 px-5 rounded-xl text-sm hover:bg-zinc-200 transition-all">
+                            <span>Buka Aplikasi</span> <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                        </a>
+                    </div>
+
+                    <!-- Project 3: Aplikasi Inventaris -->
+                    <div class="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-7 flex flex-col justify-between hover:border-zinc-700 transition-all group">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-xs uppercase tracking-wider text-zinc-400 bg-zinc-800 px-3 py-1 rounded-full">Administrasi</span>
+                                <i class="fa-solid fa-boxes-stacked text-xl text-zinc-400 group-hover:text-white transition-colors"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Aplikasi Inventaris</h3>
+                            <p class="text-zinc-400 text-sm mb-6 leading-relaxed">
+                                Sistem pencatatan inventaris kantor atau barang masuk dan keluar secara terstruktur guna memudahkan kontrol aset perusahaan.
+                            </p>
+                        </div>
+                        <a href="https://share.gemini.google/4Dbw0bmuwJ8O" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-white text-black font-semibold py-3 px-5 rounded-xl text-sm hover:bg-zinc-200 transition-all">
+                            <span>Buka Aplikasi</span> <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                        </a>
+                    </div>
+
+                    <!-- Project 4: Aplikasi Resepsionis -->
+                    <div class="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-7 flex flex-col justify-between hover:border-zinc-700 transition-all group">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-xs uppercase tracking-wider text-zinc-400 bg-zinc-800 px-3 py-1 rounded-full">Layanan Bisnis</span>
+                                <i class="fa-solid fa-address-book text-xl text-zinc-400 group-hover:text-white transition-colors"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Aplikasi Resepsionis</h3>
+                            <p class="text-zinc-400 text-sm mb-6 leading-relaxed">
+                                Buku tamu digital dan pencatatan kunjungan resepsionis untuk mendukung tata kelola front office yang profesional dan modern.
+                            </p>
+                        </div>
+                        <a href="https://share.gemini.google/p5fbVeswKRbK" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-white text-black font-semibold py-3 px-5 rounded-xl text-sm hover:bg-zinc-200 transition-all">
+                            <span>Buka Aplikasi</span> <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. CONTACT SECTION -->
+        <section id="contact" class="py-24">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold tracking-tight mb-3">Kontak & Sosial Media</h2>
+                    <p class="text-zinc-400 text-sm max-w-md mx-auto">Hubungi saya melalui platform media sosial di bawah ini.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Instagram Card -->
+                    <a href="https://instagram.com/zam1.1.1.1" target="_blank" rel="noopener noreferrer" class="bg-zinc-900/60 border border-zinc-800 rounded-2xl p-6 text-center hover:border-white transition-all group flex flex-col items-center">
+                        <div class="w-14 h-14 rounded-full bg-zinc-800 flex items-center justify-center mb-4 group-hover:bg-white group-hover:text-black transition-colors">
+                            <i class="fa-brands fa-instagram text-2xl"></i>
+                        </div>
+                        <h3 class="font-semibold text-lg mb-1">Instagram</h3>
+                        <p class="text-xs text-zinc-400 mb-4">@zam1.1.1.1</p>
+                        <span class="text-xs font-medium text-zinc-300 group-hover:underline flex items-center gap-1">Kunjungi Profil <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+                    </a>
+
+                    <!-- TikTok Card -->
+                    <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="bg-zinc-900/60 border border-zinc-800 rounded-2xl p-6 text-center hover:border-white transition-all group flex flex-col items-center">
+                        <div class="w-14 h-14 rounded-full bg-zinc-800 flex items-center justify-center mb-4 group-hover:bg-white group-hover:text-black transition-colors">
+                            <i class="fa-brands fa-tiktok text-2xl"></i>
+                        </div>
+                        <h3 class="font-semibold text-lg mb-1">TikTok</h3>
+                        <p class="text-xs text-zinc-400 mb-4">@m.rakamuazham</p>
+                        <span class="text-xs font-medium text-zinc-300 group-hover:underline flex items-center gap-1">Kunjungi Profil <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+                    </a>
+
+                    <!-- Facebook Card -->
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="bg-zinc-900/60 border border-zinc-800 rounded-2xl p-6 text-center hover:border-white transition-all group flex flex-col items-center">
+                        <div class="w-14 h-14 rounded-full bg-zinc-800 flex items-center justify-center mb-4 group-hover:bg-white group-hover:text-black transition-colors">
+                            <i class="fa-brands fa-facebook-f text-2xl"></i>
+                        </div>
+                        <h3 class="font-semibold text-lg mb-1">Facebook</h3>
+                        <p class="text-xs text-zinc-400 mb-4">M. Raka Muazham</p>
+                        <span class="text-xs font-medium text-zinc-300 group-hover:underline flex items-center gap-1">Kunjungi Profil <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+                    </a>
+
+                    <!-- WhatsApp Card -->
+                    <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" class="bg-zinc-900/60 border border-zinc-800 rounded-2xl p-6 text-center hover:border-white transition-all group flex flex-col items-center">
+                        <div class="w-14 h-14 rounded-full bg-zinc-800 flex items-center justify-center mb-4 group-hover:bg-white group-hover:text-black transition-colors">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                        </div>
+                        <h3 class="font-semibold text-lg mb-1">WhatsApp</h3>
+                        <p class="text-xs text-zinc-400 mb-4">Kirim Pesan Langsung</p>
+                        <span class="text-xs font-medium text-zinc-300 group-hover:underline flex items-center gap-1">Hubungi Sekarang <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-zinc-900 py-8 bg-black text-center text-xs text-zinc-500">
+        <div class="max-w-6xl mx-auto px-6">
+            <p>&copy; 2026 M. Raka Muazham. Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Interactivity -->
+    <script>
+        // Toggle Mobile Menu
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
+```
